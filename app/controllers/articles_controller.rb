@@ -3,11 +3,20 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
   
+  def show
+    @article = Article.find(params[:id])
+  end
+  
+  
   def create
     @article = Article.new(article_params)
-    @article.save
-    redirect_to articles_show(@article)
-  end
+    if @article.save
+      flash[:success] = "Your article was created successfully!"
+      redirect_to articles_path(@article)
+    else
+      render 'new'
+    end
+  end 
   
   private
   
@@ -15,6 +24,6 @@ class ArticlesController < ApplicationController
       params.require(:article).permit(:title, :city, :country, :description)
     end
     
-  
-end
+end 
+
 
