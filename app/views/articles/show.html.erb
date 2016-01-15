@@ -3,3 +3,5 @@
 <p>City: <%= @article.city %> </p>
 <p>Country: <%= @article.country %> </p>
 <p>Story: <%= @article.description %> </p>
+<%= link_to "Edit this Story", edit_article_path(@article) %> |
+<%= link_to "Back to All Stories", articles_path %>
