@@ -37,6 +37,13 @@ class ArticlesController < ApplicationController
     end
   end 
   
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    flash[:notice] = "Your story was deleted succesfully."
+    redirect_to articles_path
+  end
+  
   private
   
     def article_params
