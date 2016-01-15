@@ -12,6 +12,7 @@ $navbar-default-bg: #8F1D21;
   background-image: asset-url('hiker2.jpg');
   background-size:cover;
   height:550px;
+
 }
 
 .jumbotron h1 {
@@ -35,4 +36,9 @@ $navbar-default-bg: #8F1D21;
 .btn-xlarge:hover {
   background-color: #C3272B;
   border: 2px solid #C3272B;
+}
+
+.col-sm-10 {
+  margin-bottom: 10px !important;
+
 }
