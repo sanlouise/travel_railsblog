@@ -7,6 +7,11 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
   
+  def edit
+    @article = Article.find(params[:id])
+  end
+  
+  
   
   def create
     @article = Article.new(article_params)
