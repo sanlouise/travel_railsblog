@@ -1,0 +1,18 @@
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: white;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color:black;
+  text-decoration:none;
+}
+
+$navbar-default-bg: #8F1D21;
+
+nav.navbar.nav {
+  color: #fff !important;
+}
