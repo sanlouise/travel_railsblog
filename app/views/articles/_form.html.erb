@@ -12,14 +12,14 @@
 <div class="row">
   <div class="col-md-12">
     
-    <%= form_for @article do |f| %>
+    <%= form_for(@article, :html => {class: "form-horizontal", role: "form"}) do |f| %>
     
       <!--title-->
       <div class="form-group">
         <div class="control-label col-sm-2">
           <%= f.label :title, "Story Title" %>
         </div>
-        <div class="col-sm-10">
+        <div class="col-sm-8">
           <%= f.text_field :title, class: "form-control", placeholder: "", autofocus: true %>
         </div>
       </div>
@@ -29,7 +29,7 @@
         <div class="control-label col-sm-2">
           <%= f.label :city, "City" %>
         </div>
-        <div class="col-sm-10">
+        <div class="col-sm-8">
           <%= f.text_field :city, class: "form-control", placeholder: "", autofocus: true %>
         </div>
       </div>
@@ -39,7 +39,7 @@
         <div class="control-label col-sm-2">
           <%= f.label :country, "Country" %>
         </div>
-        <div class="col-sm-10">
+        <div class="col-sm-8">
           <%= f.text_field :country, class: "form-control", placeholder: "", autofocus: true %>
         </div>
       </div>
@@ -49,19 +49,22 @@
         <div class="control-label col-sm-2">
           <%= f.label :description, "Your Story" %>
         </div>
-        <div class="col-sm-10">
+        <div class="col-sm-8">
           <%= f.text_area :description, rows: 10, class: "form-control", placeholder: "", autofocus: true %>
         </div>
       </div>
       
       <!--submit button-->
-      <div class="form-group">
-        <div class="col-sm-10">
+      <div class="form-group text-center">
+        <div class="col-sm-8 col-sm-offset-2">
           <%= f.submit class: 'btn btn-success btn-lg' %>
         </div>
       </div>
       
     <% end %>
+    <div class="col-xs-4 col-xs-offset-4">
+      <%= link_to "Cancel Submission and Return to All Stories", articles_path %>
+    </div>
   </div>
 </div>
 
