@@ -2,3 +2,19 @@
   background-color: #ECF0F1 !important;
   border: none;
 }
+
+.image.responsive.index-bg {
+  background-image: asset-url('mountains.jpg');
+  background-size: 100%;
+  background-repeat:no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center;
+  
+}
+
+.article-body {
+  margin-bottom: 10px;
+}

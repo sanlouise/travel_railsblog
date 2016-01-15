@@ -2,8 +2,11 @@ $navbar-default-bg: #8F1D21;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
 
-
+body {
+  font-family: 'Roboto', sans-serif; font-weight: 300;
+}
 .center {
   text-align: center;
 }
