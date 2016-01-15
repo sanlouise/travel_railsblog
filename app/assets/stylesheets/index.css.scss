@@ -4,7 +4,7 @@
 }
 
 .image.responsive.index-bg {
-  background-image: asset-url('mountains.jpg');
+  background-image: asset-url('rocky.jpg');
   background-size: 100%;
   background-repeat:no-repeat;
   -webkit-background-size:cover;
@@ -17,4 +17,10 @@
 
 .article-body {
   margin-bottom: 10px;
+}
+
+h1.text-center{
+  color:white !important;
+  font-size: 50px;
+  margin-bottom: 25px;
 }
