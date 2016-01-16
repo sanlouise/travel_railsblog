@@ -2,12 +2,19 @@
   <h1 class="text-center"> 
     Welcome to <%= @user.username %>'s page 
   </h1>
+  
   <div class="col-md-4 col-md-offset-4 center">
     <%= gravatar_for @user, size: 150 %>
     <h4 class="text-center-white"><%= @user.username %>'s articles</h4>
   </div>
 
+  <div class="center">
+    <%= will_paginate @user_articles %>
+  </div>
   
+  <%= render 'articles/article', obj: @user_articles %>
+  <div class="center">
+    <%= will_paginate @user_articles %>
+  </div>
   
-  <%= render 'articles/article', obj: @user.articles %>
 </body>
