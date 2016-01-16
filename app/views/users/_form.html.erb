@@ -1,0 +1,55 @@
+<%= render 'shared/errors', obj: @user %>
+
+<div class="row">
+  <div class="col-md-12">
+    
+    <%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+    
+      <!--username-->
+      <div class="form-group">
+        <div class="control-label col-sm-3">
+          <%= f.label :username, "Username" %>
+        </div>
+        
+        <div class="col-sm-6">
+          <%= f.text_field :username, class: "form-control", placeholder: "", autofocus: true %>
+        </div>
+      </div>
+      
+      <!--email-->
+      <div class="form-group">
+        <div class="control-label col-sm-3">
+          <%= f.label :email, "Email" %>
+        </div>
+        <div class="col-sm-6">
+          <%= f.email_field :email, class: "form-control", placeholder: "", autofocus: true %>
+        </div>
+      </div>
+      
+      <!--password-->
+      <div class="form-group">
+        <div class="control-label col-sm-3">
+          <%= f.label :password, "New Password" %>
+        </div>
+        <div class="col-sm-6">
+          <%= f.password_field :password, class: "form-control", placeholder: "", autofocus: true %>
+        </div>
+      </div>
+      
+      </br>
+      </br>
+
+      <!--submit button-->
+      <div class="form-group text-center">
+        <div class="col-sm-8 col-sm-offset-2">
+          <%= f.submit(@user.new_record? ? "Sign Up" : "Save Changes", class: 'btn btn-success btn-lg') %>
+        </div>
+      </div>
+      
+    <% end %>
+    
+    <!--<div class="col-xs-4 col-xs-offset-4">-->
+    <!--  <%= link_to "Return to Home", root_path %>-->
+    <!--</div>-->
+  </div>
+</div>
