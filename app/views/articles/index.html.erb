@@ -13,6 +13,11 @@
         </h3>
 
         </br>
+        
+        <div class="article-body">
+          <strong>Written by:</strong><%= article.user.username if article.user %>
+        </div>
+        
         <div class="article-body">
           <strong>I visited: </strong><%= article.city %>, <%= article.country %>
         </div>
@@ -21,9 +26,11 @@
           <strong>My story: </strong><%= truncate(article.description, length: 100) %>
         </div>
         
+        
         <!--Action Buttons-->
         <div class="index actions">
-          
+          <small>Written: <%= time_ago_in_words(article.created_at) %> ago, 
+          last updated: <%= time_ago_in_words(article.updated_at) %> ago.</small>
           <%= link_to "Edit", edit_article_path(article), class: "btn btn-xs btn-warning" %> |
           <%= link_to "Delete", article_path(article), method: :delete, 
                                               data: { confirm: "Are you sure you want to delete this article?" }, 
