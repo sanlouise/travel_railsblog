@@ -1,0 +1,18 @@
+.image.responsive.index-users-bg {
+
+  background-image: asset-url('hiker2.jpg');
+  background-size: 100%;
+  background-repeat:no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center;
+}
+
+
+.listing {
+  list-style: none;
+  padding-left: 0;
+  
+}
