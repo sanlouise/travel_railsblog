@@ -3,8 +3,11 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
-#For secure password
+# For secure password
 gem 'bcrypt', '~> 3.1.7'
+# Add pagination 
+gem 'will_paginate', '3.0.6'
+gem 'bootstrap-will_paginate', '0.0.10'
 
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.6'

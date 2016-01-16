@@ -1,7 +1,10 @@
 <body class ="image responsive index-bg">
-
-<h1 class="text-center">All Stories</h1>
-
-<%= render 'article', obj: @articles %>
-
+  <h1 class="text-center">All Stories</h1>
+    <div align="center">
+      <%= will_paginate %>
+    </div>
+    <%= render 'article', obj: @articles %>
+    <div align="center">
+      <%= will_paginate %>
+    </div>
 </body>
