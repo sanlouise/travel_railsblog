@@ -11,44 +11,12 @@ body {
   text-align: center;
 }
 
-.center.jumbotron {
-  background-image: asset-url('hiker2.jpg');
-  background-size:cover;
-  height:550px;
-
-}
-
-.jumbotron h1 {
-  
-  color: white;
-  text-align: center;
-  padding-top: 105px;
-  margin-bottom: 30px;
-  letter-spacing: -1px;
-  font-weight: bold;
-  font-size: 70px !important;
-
-}
-
-.btn-xlarge{
-  font-size: 1.7em;
-  background-color:#C93756;
-  border: 2px solid #C93756;
-}
-
-.btn-xlarge:hover {
-  background-color: #C3272B;
-  border: 2px solid #C3272B;
-}
 
 .col-sm-10 {
   margin-bottom: 10px !important;
 
 }
 
-.footer {
-  margin-top: 15px;
-}
 
 .article-actions{
   padding-top: 20px;

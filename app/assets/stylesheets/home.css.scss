@@ -1,0 +1,40 @@
+.image.responsive.home-bg {
+  background-image: asset-url('hiker2.jpg');
+  background-size: 100%;
+  background-repeat:no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center;
+}
+
+
+.center.jumbotron {
+  background-color: transparent;
+  height:550px;
+
+}
+
+.jumbotron h1 {
+  
+  color: white;
+  text-align: center;
+  padding-top: 105px;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  font-weight: bold;
+  font-size: 70px !important;
+
+}
+
+.btn-xlarge{
+  font-size: 1.7em;
+  background-color:#C93756;
+  border: 2px solid #C93756;
+}
+
+.btn-xlarge:hover {
+  background-color: #C3272B;
+  border: 2px solid #C3272B;
+}
