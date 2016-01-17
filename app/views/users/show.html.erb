@@ -1,11 +1,18 @@
 <body class ="image responsive show-users-bg">
-  <h1 class="text-center"> 
-    Welcome to <%= @user.username %>'s page 
-  </h1>
+  <!--<h1 class="text-center"> -->
+  <!--  Welcome to <%= @user.username %>'s page -->
+  <!--</h1>-->
   
   <div class="col-md-4 col-md-offset-4 center">
+    </br>
+    </br>
     <%= gravatar_for @user, size: 150 %>
-    <h4 class="text-center-white"><%= @user.username %>'s articles</h4>
+    </br>
+    </br>
+    </br>
+    <h4 class="text-center-white"> Stories by <%= @user.username %></h4>
+    </br>
+    </br>
   </div>
 
   <div class="center">

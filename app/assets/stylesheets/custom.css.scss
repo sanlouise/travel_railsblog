@@ -1,5 +1,6 @@
 $navbar-default-bg: #8F1D21;
 
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
@@ -17,6 +18,9 @@ body {
 
 }
 
+h4.text-center-white{
+  font-size: 25px;
+}
 
 .article-actions{
   padding-top: 20px;
@@ -32,4 +36,8 @@ body {
 
 // Pagination
 
-
+.alert.alert-success {
+  background-color: #87D37C !important;
+  color: white !important;
+  font-size: 16px;
+}
