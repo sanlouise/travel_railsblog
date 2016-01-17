@@ -30,11 +30,11 @@
         
       <% if logged_in? %>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.username %> <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.username %><%= " | Admin" if current_user.admin? %> <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><li><%= link_to "New Story", new_article_path %></li></li>
             <li><li><%= link_to "View my Profile", user_path(current_user) %></li></li>
-            <li><li><%= link_to "Manage my Profile", edit_user_path(current_user) %></li></li>
+            <li><li><%= link_to "Manage my Account", edit_user_path(current_user) %></li></li>
             <li role="separator" class="divider"></li>
             <li><%= link_to 'Logout', logout_path, method: :delete %> </li>
           </ul>
