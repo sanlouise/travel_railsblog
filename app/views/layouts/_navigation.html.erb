@@ -44,13 +44,14 @@
             <ul class="dropdown-menu">
               <li><li><%= link_to "New Story", new_article_path %></li></li>
               <li><li><%= link_to "My Stories", user_path(current_user) %></li></li>
-              <li><li><%= link_to "My Profile", user_path(current_user) %></li></li>
+              <li><li><%= link_to "Manage my Profile", edit_user_path(current_user) %></li></li>
               <li role="separator" class="divider"></li>
               <li><%= link_to 'Logout', logout_path, method: :delete %> </li>
             </ul>
           </li>
         <% else %>
         <li><%= link_to 'Login', login_path %> </li>
+        <li><%= link_to 'Signup', signup_path %> </li>
         
         <% end %>
         
