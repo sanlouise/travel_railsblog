@@ -4,7 +4,7 @@
 }
 
 .image.responsive.index-bg {
-  background-image: asset-url('rocky.jpg');
+  background-image: asset-url('geysir.jpg');
   background-size: 100%;
   background-repeat:no-repeat;
   -webkit-background-size:cover;
@@ -12,6 +12,7 @@
   -o-background-size:cover;
   background-size:cover;
   background-position:center;
+  opacity: 1;
   
 }
 

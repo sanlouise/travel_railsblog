@@ -27,11 +27,11 @@
   <div class="article-actions">
     <%= link_to "Back to All Stories", articles_path, class: "btn btn-xs btn-primary" %> 
     
-    <% if logged_in? (&& current_user == @article.user || current_user.admin?) %>
-    <%= link_to "Edit this Story", edit_article_path(@article), class: "btn btn-xs btn-warning" %> |
-    <%= link_to "Delete this Story", article_path(@article), method: :delete, 
-                                        data: { confirm: "Are you sure you want to delete this story?" }, 
-                                        class: "btn btn-xs btn-danger" %>
+    <% if logged_in? && (current_user == @article.user || current_user.admin?) %>
+      <%= link_to "Edit this Story", edit_article_path(@article), class: "btn btn-xs btn-warning" %> |
+      <%= link_to "Delete this Story", article_path(@article), method: :delete, 
+                                          data: { confirm: "Are you sure you want to delete this story?" }, 
+                                          class: "btn btn-xs btn-danger" %>
     <% end %>
   </div>
 </div>

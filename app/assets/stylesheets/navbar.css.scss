@@ -11,7 +11,28 @@
   text-decoration:none;
 }
 
-.nav.navbar-default.container-fluid.navbar-header {
-  color: #fff !important;
+ul.nav.navbar-nav a {
+  color: #fff;
+  font-size: 17px;
 }
 
+
+ul.dropdown-menu li a{
+  color:black !important;
+}
+
+
+// Profile Dropdown
+.dropdown-toggle {
+  color:white !important;
+}
+
+.dropdown-toggle:hover {
+  color:white !important;
+}
+
+.dropdown-toggle:clicked {
+  color:white !important;
+}
+
+// End Profile Dropdown

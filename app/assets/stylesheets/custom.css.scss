@@ -36,8 +36,40 @@ h4.text-center-white{
 
 // Pagination
 
+// .pagination > li > span {
+//     position: relative;
+//     float: left;
+//     padding: 10px 12px;
+//     line-height: 1.42857143;
+//     text-decoration: none;
+//     color: red;
+//     background-color: white;
+//     border: 1px solid #ddd;
+//     margin-left: -1px;
+// }
+
+
+//Messages
+
 .alert.alert-success {
   background-color: #87D37C !important;
   color: white !important;
-  font-size: 16px;
+  font-size: 20px;
+}
+
+.panel.panel-danger{
+  background-color: #C91F37 !important;
+  color: white !important;
+  font-size: 15px;
+  
+}
+
+.panel-heading{
+  background-color: #D24D57 !important;
+  color: white !important;
+
+}
+
+.panel-body ul li {
+    list-style-type: none !important;
 }
