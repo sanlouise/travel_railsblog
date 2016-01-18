@@ -15,38 +15,33 @@
     <div class="collapse navbar-collapse right" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><%= link_to "All Stories", articles_path %></li>
-        <li><%= link_to "Browse Users", users_path %></li>
-        
+        <li><%= link_to "All Users", users_path %></li>
+        <li><%= link_to "Travel Categories", categories_path %></li>
+      </ul>
 
-      </ul>
-        <!--<form class="navbar-form navbar-left" role="search">-->
-        <!--  <div class="form-group">-->
-        <!--    <input type="text" class="form-control" placeholder="Search">-->
-        <!--  </div>-->
-        <!--  <button type="submit" class="btn btn-default">Submit</button>-->
-        <!--</form>-->
       <ul class="nav navbar-nav navbar-right">
-        <!--<li>  <%= link_to "About", about_path %></li>-->
         
-      <% if logged_in? %>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.username %><%= " | Admin" if current_user.admin? %> <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><li><%= link_to "New Story", new_article_path %></li></li>
-            <li><li><%= link_to "View my Profile", user_path(current_user) %></li></li>
-            <li><li><%= link_to "Manage my Account", edit_user_path(current_user) %></li></li>
-            <li role="separator" class="divider"></li>
-            <li><%= link_to 'Logout', logout_path, method: :delete %> </li>
-          </ul>
-        </li>
-      <% else %>
-      
-        <li><%= link_to 'Login', login_path %> </li>
-        <li><%= link_to 'Signup', signup_path %> </li>
+        <% if logged_in? %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.username %><%= " | Admin" if current_user.admin? %> <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><li><%= link_to "New Story", new_article_path %></li></li>
+              <li><%= link_to 'New Travel Category', new_category_path %></li>
+              <li><li><%= link_to "View my Profile", user_path(current_user) %></li></li>
+              <li><li><%= link_to "Manage my Account", edit_user_path(current_user) %></li></li>
+              <li role="separator" class="divider"></li>
+              <li><%= link_to 'Logout', logout_path, method: :delete %> </li>
+            </ul>
+          </li>
+          
+        <% else %>
         
-      <% end %>
+          <li><%= link_to 'Login', login_path %> </li>
+          <li><%= link_to 'Signup', signup_path %> </li>
+          
+        <% end %>
         
       </ul>
-    </div><!-- /.navbar-collapse -->
+    </div>
   </div><!-- /.container-fluid -->
 </nav>
