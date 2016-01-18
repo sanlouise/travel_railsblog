@@ -1,9 +1,10 @@
 <h2 class="text-center"><%= @article.title %></h2>
-<div class="well col-xs-8 col-xs-offset-2">
+</br>
+<div class="well col-xs-10 col-xs-offset-1">
   <% if @article.user %>
     <ul class="listing">
         <div class="row center">
-          <div class="col-md-8 col-md-offset-2">
+          <div class="col-md-12 ">
             
             <li><%= link_to gravatar_for(@article.user), user_path(@article.user) %></li>
             <li class="article-title">
@@ -31,7 +32,7 @@
   <p><strong>My Story:</strong> </br> </br> 
   <%= @article.description %></p>
 
-  <div class="article-actions">
+  <div class="article-actions text-center">
     <%= link_to "Back to All Stories", articles_path, class: "btn btn-xs btn-primary" %> 
     
     <% if logged_in? && (current_user == @article.user || current_user.admin?) %>
