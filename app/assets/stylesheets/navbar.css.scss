@@ -16,9 +16,16 @@ ul.nav.navbar-nav a {
   font-size: 17px;
 }
 
+ul.dropdown-menu {
+  background-color: #C3272B !important;
+}
+
+ul.dropdown-menu li :hover {
+  background-color: #8F1D21 !important;
+}
 
 ul.dropdown-menu li a{
-  color:black !important;
+  color:white !important;
 }
 
 
