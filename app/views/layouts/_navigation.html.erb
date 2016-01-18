@@ -12,12 +12,15 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse right" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to "All Stories", articles_path %></li>
-        <li><%= link_to "All Users", users_path %></li>
-        <li><%= link_to "Travel Categories", categories_path %></li>
-              </hr>
+        
+        
+          <li><%= link_to "All Stories", articles_path %></li>
+          <li><%= link_to "All Users", users_path %></li>
+          <li><%= link_to "Travel Categories", categories_path %></li>
+        
+          
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -25,8 +28,14 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.username %><%= " | Admin" if current_user.admin? %> <span class="caret"></span></a>
             <ul class="dropdown-menu">
+              
+              <% if current_user.admin? %>
+              
               <li><li><%= link_to "New Story", new_article_path %></li></li>
               <li><%= link_to 'New Category', new_category_path %></li>
+              
+              <% end %>
+              
               <li><li><%= link_to "View my Profile", user_path(current_user) %></li></li>
               <li><li><%= link_to "Settings", edit_user_path(current_user) %></li></li>
               <li role="separator" class="divider"></li>
