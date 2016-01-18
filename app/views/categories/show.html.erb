@@ -1,0 +1,10 @@
+<body class ="image responsive index-bg">
+  <h1 class="text-center"><%= "All " + @category.name + " Stories" %> </h1>
+    <div align="center">
+      <%= will_paginate @category_articles %>
+    </div>
+    <%= render 'articles/article', obj: @category_articles %>
+    <div align="center">
+      <%= will_paginate @category_articles %>
+    </div>
+</body>
