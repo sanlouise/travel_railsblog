@@ -1,11 +1,13 @@
 <body class ="image responsive index-users-bg">
   <h1 class="text-center">All Story Writers</h1>
-  <%= will_paginate %>
+  
   <div class="text-center">
+    <%= will_paginate %>
     <% @users.each do |user| %>
       <ul class="listing">
         <div class="row">
-          <div class="well col-md-4 col-md-offset-4">
+          <div class="well col-md-2 col-md-offset-5">
+            <div class="userindex">
             
             <li><%= link_to gravatar_for(user), user_path(user) %></li>
             <li class="article-title"><%= link_to user.username, user_path(user) %></li>
@@ -14,7 +16,8 @@
             <% if logged_in? and current_user.admin? %>
             <li><%= link_to "Delete User", user_path(user), method: :delete, class: "btn btn-danger",
                             data: { confirm: "Are you sure you want to delete this user and all associated stories?" } %> </li>
-                <% end %>          
+                <% end %>      
+                </div>
           </div>
         </div>
       </ul>
