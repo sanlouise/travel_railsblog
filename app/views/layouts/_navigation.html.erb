@@ -28,12 +28,11 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.username %><%= " | Admin" if current_user.admin? %> <span class="caret"></span></a>
             <ul class="dropdown-menu">
+
+              <li><li><%= link_to "New Story", new_article_path %></li></li>
               
               <% if current_user.admin? %>
-              
-              <li><li><%= link_to "New Story", new_article_path %></li></li>
               <li><%= link_to 'New Category', new_category_path %></li>
-              
               <% end %>
               
               <li><li><%= link_to "View my Profile", user_path(current_user) %></li></li>
