@@ -1,0 +1,36 @@
+<%= render 'shared/errors', obj: @category %>
+
+</br>
+</br>
+
+<%= form_for(@category, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+
+  <!--username-->
+  <div class="form-group">
+    <div class="control-label col-sm-3">
+      <%= f.label :name, "Category: " %>
+    </div>
+    
+    <div class="col-sm-6">
+      <%= f.text_field :name, class: "form-control", placeholder: "For instance: Backpacking, City Trip, Study Abroad...", autofocus: true %>
+    </div>
+  </div>
+  
+  </br>
+  </br>
+
+  <!--submit button-->
+  <div class="form-group text-center">
+    <div class="col-sm-8 col-sm-offset-2">
+      <%= f.submit class: 'btn btn-success btn-lg' %>
+    </div>
+  </div>
+  
+<% end %>
+    
+    <!--<div class="col-xs-4 col-xs-offset-4">-->
+    <!--  <%= link_to "Return to Home", root_path %>-->
+    <!--</div>-->
+  </div>
+</div>
+
