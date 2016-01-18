@@ -1,10 +1,15 @@
 <h1 class="center"> Login </h1>
+</br>
+</br>
 
 <%= form_for(:session, :html => {class: "form-horizontal", role: "form"}, url: login_path) do |f| %>
     
       <!--email-->
       <div class="form-group">
+
         <div class="control-label col-sm-3">
+          
+
           <%= f.label :email, "Your Email" %>
         </div>
         
