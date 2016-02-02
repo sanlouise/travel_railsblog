@@ -1,3 +1,10 @@
+
+@media only screen and (max-width: 320px) {
+.homepage-text { 
+  font-size: 2em; 
+}
+}
+
 .image.responsive.home-bg {
   background-image: asset-url('hiker2.jpg');
   background-size: 100%;
