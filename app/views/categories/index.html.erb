@@ -3,8 +3,6 @@
 </br>
 <div class="text-center">
   <%= will_paginate %>
-
-  
     <% @categories.each do |category| %>
     
       <ul class="listing">
@@ -17,7 +15,7 @@
               </br>
               
             <li><small><%= pluralize(category.articles.count, "article") %> </small></li>
-            <% if current_user.admin? %>
+            <% if logged_in? and current_user.admin? %>
             </br>
               <%= link_to "Edit", edit_category_path(category), class: "btn btn-xs btn-warning" %> 
             <% end %>
