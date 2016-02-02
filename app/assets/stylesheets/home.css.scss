@@ -1,8 +1,8 @@
 
-@media only screen and (max-width: 320px) {
-.homepage-text { 
-  font-size: 2em; 
-}
+@media screen and (max-width: 480px) {
+  h1.homepage-text { 
+    font-size: 60px !important; 
+  }
 }
 
 .image.responsive.home-bg {
@@ -31,7 +31,7 @@
   margin-bottom: 30px;
   letter-spacing: -1px;
   font-weight: bold;
-  font-size: 70px !important;
+  font-size: 70px ;
 
 }
 
