@@ -1,12 +1,13 @@
 .image.responsive.show-users-bg{
   background-image: asset-url('desert.jpg');
   background-size: 100%;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
   -webkit-background-size:cover;
   -moz-background-size:cover;
   -o-background-size:cover;
   background-size:cover;
   background-position:center;
+  min-width: 100%;
   
 }
 

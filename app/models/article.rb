@@ -8,5 +8,7 @@ class Article < ActiveRecord::Base
   validates :country, presence: true, length: { minimum: 2, maximum: 50 }
   validates :description, presence: true, length: { minimum: 30 }
   validates :user_id, presence: true
+  
+  default_scope { order(created_at: :desc) }
 end
 
