@@ -97,8 +97,8 @@
 <% if logged_in? %>
   <div class="row">
     <div class="col-md-8  col-md-offset-2">
-      <h3>Leave a comment</h3>
-      <div class="well">
+      <h3 class="text-center">Leave a comment</h3>
+      
         <%= form_for([@article,@comment]) do |f| %>
           <!-- Error section -->
           <% if @comment.errors.any? %>
@@ -114,11 +114,13 @@
             </div>
           <% end %>
           <!-- Error ends -->
-         
-          <%= f.label :body %>
-          <%= f.text_area :body %>
+        <div class="well">
+
+          <div class="control-group">
+            <%= f.text_area :body, class: "col-md-12", rows: "7", placeholder: "Say something nice!" %>
+          </div>
           
-          <%= f.submit 'Post comment', class: "btn btn-success btn-md" %>
+          <%= f.submit 'Post Comment', class: "btn btn-success btn-md text-center" %>
         <% end %>
       </div>
     </div>
