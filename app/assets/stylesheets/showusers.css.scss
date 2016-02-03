@@ -19,3 +19,10 @@
 .col-md-12.comment-text{
   width: 100%;
 }
+
+
+@media screen and (max-width: 480px) {
+.user_info.comment_img.center { 
+    size: 50% !important; 
+  }
+}
