@@ -72,7 +72,7 @@
          <p class="inline-text">
                <span class="quiet"><small><strong><%= link_to comment.user.username, user_path(comment.user) %></strong> over <%= time_ago_in_words(comment.created_at) %> ago  </small></span>
             </p>
-            <h4><%= comment.body %></h4>
+            <span class="quiet"><%= comment.body %></span>
             
             
           </div>
