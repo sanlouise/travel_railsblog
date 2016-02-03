@@ -114,11 +114,12 @@
         <div class="well">
 
           <div class="control-group">
-            <div class="comment-text">
-            <%= f.text_area :body, class: "col-md-12", rows: "7", placeholder: "Say something nice!" %>
+        
+            <%= f.text_area :body, class: "col-md-12 comment-text", rows: "7", placeholder: "Say something nice!" %>
+        
+          <div class="text-center">
+            <%= f.submit 'Post Comment', class: "btn btn-success btn-md text-center" %>
           </div>
-          
-          <%= f.submit 'Post Comment', class: "btn btn-success btn-md text-center" %>
         <% end %>
         
       </div>
