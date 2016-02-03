@@ -69,12 +69,14 @@
             </section>
           </div>
           <div class="col-md-9">
-            
+         <p class="inline-text">
+               <span class="quiet"><small><strong><%= link_to comment.user.username, user_path(comment.user) %></strong> over <%= time_ago_in_words(comment.created_at) %> ago  </small></span>
+            </p>
             <h4><%= comment.body %></h4>
             <% if logged_in? && (current_user == @comment.user) %>| 
               <%= link_to "Edit this Comment", edit_comment_path(@comment), class: "btn btn-xs btn-warning" %> |
               <%= link_to "Delete this Comment", comment_path(@comment), method: :delete, 
-                                                  data: { confirm: "Are you sure you want to delete this story?" }, 
+                                                  data: { confirm: "Are you sure you want to delete this comment?" }, 
                                                   class: "btn btn-xs btn-danger" %>
             <% end %>
             
@@ -117,11 +119,13 @@
         <div class="well">
 
           <div class="control-group">
+            <div class="comment-text">
             <%= f.text_area :body, class: "col-md-12", rows: "7", placeholder: "Say something nice!" %>
           </div>
           
           <%= f.submit 'Post Comment', class: "btn btn-success btn-md text-center" %>
         <% end %>
+        
       </div>
     </div>
   </div>
