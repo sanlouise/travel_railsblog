@@ -3,19 +3,19 @@
 <div class="well col-xs-10 col-xs-offset-1">
   <% if @article.user %>
     <ul class="listing">
-        <div class="row center">
-          <div class="col-md-12 ">
-            
-            <li><%= link_to gravatar_for(@article.user), user_path(@article.user) %></li>
-            <li class="article-title">
-              <%= link_to @article.user.username, user_path(@article.user) %>
-            </li>
-            <li><small><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %>
-            </small></li>
-            
-          </div>
+      <div class="row center">
+        <div class="col-md-12 ">
+          
+          <li><%= link_to gravatar_for(@article.user), user_path(@article.user) %></li>
+          <li class="article-title">
+            <%= link_to @article.user.username, user_path(@article.user) %>
+          </li>
+          <li><small><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %>
+          </small></li>
+          
         </div>
-      </ul>
+      </div>
+    </ul>
   <% end %>
     
   <p><strong>Country:</strong> <%= @article.country %></p>
@@ -45,3 +45,82 @@
 </div>
 
 
+
+<!-- Comments section -->
+
+<div class="row">
+  <div class="col-md-10">
+    <% if @comments.any? %>
+      <div class="row">
+        <div class="col-md-5">
+          <h2><%= pluralize(@article.comment_count, 'Comment') %>:</h2>
+          <%= will_paginate @comments %>
+        </div>
+      </div>
+    <% end %>
+    
+    <% if @comments.any? %>
+      <% @comments.each do |comment| %>
+        <hr>
+        <div class="row">
+          <div class="col-md-2 offset-1">
+            <section class="user_info comment_img center">
+              <%= link_to gravatar_for(comment.user, size: 50), user_path(comment.user) %>
+            </section>
+          </div>
+          <div class="col-md-9">
+            
+            <h4><%= comment.body %></h4>
+            <% if logged_in? && (current_user == @comment.user) %>| 
+              <%= link_to "Edit this Comment", edit_comment_path(@comment), class: "btn btn-xs btn-warning" %> |
+              <%= link_to "Delete this Comment", comment_path(@comment), method: :delete, 
+                                                  data: { confirm: "Are you sure you want to delete this story?" }, 
+                                                  class: "btn btn-xs btn-danger" %>
+            <% end %>
+            
+          </div>
+        </div>
+       <% end %>
+       <hr>
+    <% end %>
+  </div>
+</div>
+
+<% if !logged_in? %>
+  <div class="row">
+    <div class="col-md-12 comment-footer">
+      <p>You can comment when you log in. <br> Please <%= link_to "log in", login_path %> or <%= link_to "Sign up", register_path %> . </p></p>
+    </div>
+  </div>
+<% end %>
+
+<% if logged_in? %>
+  <div class="row">
+    <div class="col-md-8  col-md-offset-2">
+      <h3>Leave a comment</h3>
+      <div class="well">
+        <%= form_for([@article,@comment]) do |f| %>
+          <!-- Error section -->
+          <% if @comment.errors.any? %>
+            <div class="row">
+              <div class="alert alert-danger col-md-8 col-md-offset-2">
+                <h5>Please correct the following error(s):</h5>
+                <ul>
+                  <% @comment.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
+          <% end %>
+          <!-- Error ends -->
+         
+          <%= f.label :body %>
+          <%= f.text_area :body %>
+          
+          <%= f.submit 'Post comment', class: "btn btn-success btn-md" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
