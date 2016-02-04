@@ -1,6 +1,6 @@
 .image.responsive.index-users-bg {
 
-  background-image: asset-url('parigi.jpg');
+  background-image: asset-url('prinsengracht.jpg');
   background-size: 100%;
   background-repeat:no-repeat;
   -webkit-background-size:cover;
@@ -32,4 +32,10 @@
   border: 1px solid #e3e3e3;
   border-radius: 4px;
   background-color: #F9690E !important;
+}
+
+.user-index-bg {
+  color: white !important;
+  max-width: 150px;
+  text-align: center;
 }

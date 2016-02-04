@@ -5,14 +5,23 @@
   <%= will_paginate %>
   <div class="row">
 
-      <div class="col-md-8 col-md-offset-2 ensure-responsive">
+      <div class="col-md-8 col-md-offset-2 well">
         <% @users.each do |user| %>
           <ul class="listing">
             <div class="col-md-3 text-center">
- 
-                <li><%= link_to gravatar_for(user), user_path(user) %></li>
-                <li class="article-title"><%= link_to user.username, user_path(user) %></li>
-                <li><small><%= pluralize(user.articles.count, "article") if user.articles %></small></li>
+
+                  <li><%= link_to gravatar_for(user), user_path(user) %></li>
+                    <div class="user-index-bg">
+                      <li class="article-title">
+                        <%= link_to user.username, user_path(user) %></li>
+                      <li>
+                    </div>
+                        <small>
+                          <%= pluralize(user.articles.count, "article") if user.articles %>
+                        </small>
+                      </li>
+                    
+
                 </br>
                 <% if logged_in? and current_user.admin? %>
                   <li><%= link_to "Delete User", user_path(user), method: :delete, class: "btn btn-danger",
