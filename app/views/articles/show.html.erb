@@ -83,14 +83,6 @@
   </div>
 </div>
 
-<% if !logged_in? %>
-  <div class="row">
-    <div class="col-md-12 comment-footer">
-      <p>You can comment when you log in. <br> Please <%= link_to "log in", login_path %> or <%= link_to "Sign up", register_path %>.</p>
-    </div>
-  </div>
-<% end %>
-
 <% if logged_in? %>
   <div class="row">
     <div class="col-md-8  col-md-offset-2">
@@ -123,6 +115,12 @@
         <% end %>
         
       </div>
+    </div>
+  </div>
+<% else %>
+  <div class="row">
+    <div class="col-md-12 comment-footer text-center">
+      <p>Please <%= link_to "Log in", login_path %> or <%= link_to "Sign up", signup_path %> to leave your comment.</p>
     </div>
   </div>
 <% end %>
