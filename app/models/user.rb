@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   
   has_many :articles, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :conversations, :foreign_key => :sender_id
   
   before_save { self.email = email.downcase }
   validates :username, presence: true, uniqueness: { case_sensitive: false },
@@ -15,4 +16,7 @@ class User < ActiveRecord::Base
             format: { with: VALID_EMAIL_REGEX }
             
   has_secure_password
+end
+
+  
 end
