@@ -8,9 +8,7 @@ gem 'bcrypt', '~> 3.1.7'
 # Add pagination 
 gem 'will_paginate', '3.0.6'
 gem 'bootstrap-will_paginate', '0.0.10'
-# Use Private Pub for chat functionality
-gem 'private_pub'
-gem 'thin'
+
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
